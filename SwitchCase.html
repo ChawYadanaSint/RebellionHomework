@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript switch and function</h2>
+
+<p id="demo"></p>
+
+<script>
+function revolution(){
+  var type=window.prompt("What's your revolution style?");
+switch(type){
+  case "protest": 
+    // console.log("You protest peacefully.");
+    document.getElementById("demo").innerHTML = "You protest peacefully.";
+    break;
+  case "CDM":
+    // console.log("We salute you.");
+    document.getElementById("demo").innerHTML = "We salute you.";
+    break;
+  case "Donator":
+    // console.log("Thank you for your support");
+    document.getElementById("demo").innerHTML = "Thank you for your support";
+    break;
+  case "Defender":
+    // console.log("Take care! You are our hero.");
+    document.getElementById("demo").innerHTML = "Take care! You are our hero.";
+    break;
+  default:
+    // console.log("Please support in some way for revolution.");
+    document.getElementById("demo").innerHTML = "Please support in some way for revolution.";
+    break;
+}
+};
+revolution();
+</script>
+
+</body>
+</html>
