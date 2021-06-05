@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript switch</h2>
+
+<p id="demo"></p>
+
+<script>
+function showYourGeneration(birthYear){
+  const Present=2021;
+if(birthYear<=Present){
+  if(birthYear>=2010){
+    document.getElementById("demo").innerHTML ="You are Generation Alpha";
+  }
+  else if(birthYear<2010 && birthYear>=1997){
+    document.getElementById("demo").innerHTML ="You are Generation Z";
+  }
+  else if(birthYear<1997 && birthYear>=1981){
+    document.getElementById("demo").innerHTML ="You are Generation Y";
+  }
+  else if(birthYear<1981 && birthYear>=1965){
+    document.getElementById("demo").innerHTML ="You are Generation X";
+  }
+  else{
+    document.getElementById("demo").innerHTML ="Don't be Generation L";
+  }
+} 
+else if(isNaN(birthYear)){
+  document.write("Fill the number")
+}
+else{
+  document.write("Unvalid")
+}
+};
+var Year=prompt("What's your birth year?");
+// var Year=2000;
+// console.log(typeof(Year));
+showYourGeneration(parseInt(Year));
+// document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
