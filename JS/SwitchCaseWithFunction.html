@@ -9,8 +9,8 @@
 <script>
 function revolution(){
   var type = window.prompt("What's your revolution style?\nProtest\nCDM\nDonator\nDefender");
-  type = type.toLowerCase();
-switch(type){
+  var typeOfRevolutionStyle = type.toLowerCase();
+switch(typeOfRevolutionStyle){
   case "protest": 
     // console.log("You protest peacefully.");
     document.getElementById("demo").innerHTML = "You protest peacefully.";
