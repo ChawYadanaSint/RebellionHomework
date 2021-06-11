@@ -8,21 +8,22 @@
 
 <script>
 function revolution(){
-  var type=window.prompt("What's your revolution style?");
+  var type = window.prompt("What's your revolution style?\nProtest\nCDM\nDonator\nDefender");
+  type = type.toLowerCase();
 switch(type){
   case "protest": 
     // console.log("You protest peacefully.");
     document.getElementById("demo").innerHTML = "You protest peacefully.";
     break;
-  case "CDM":
+  case "cdm":
     // console.log("We salute you.");
     document.getElementById("demo").innerHTML = "We salute you.";
     break;
-  case "Donator":
+  case "donator":
     // console.log("Thank you for your support");
     document.getElementById("demo").innerHTML = "Thank you for your support";
     break;
-  case "Defender":
+  case "defender":
     // console.log("Take care! You are our hero.");
     document.getElementById("demo").innerHTML = "Take care! You are our hero.";
     break;
