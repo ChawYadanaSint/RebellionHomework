@@ -1,0 +1,51 @@
+
+    body{
+      background-color: darkslateblue;
+    }
+    header{
+      text-align: right;
+      font-size: 20px;
+    }
+    ul{
+      list-style-type: none;
+    }
+    li{
+      display: inline;
+      padding: 10px 10px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      font-family: monospace;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    li:hover{
+      text-shadow: 1px 1px chocolate;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    .column {
+      flex: 23%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    .column img:hover{
+      box-shadow: 0 1px 8px black;
+      transform: scale(1.2);
+    }
+    h1{
+      text-align: center;
+      color: blanchedalmond;
+      font-family: monospace;
+      font-size: 50px;
+    }
