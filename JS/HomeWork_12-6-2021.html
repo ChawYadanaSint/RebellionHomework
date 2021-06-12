@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="MaritalStatus">
+    <ol>
+      <li>Single</li>
+      <li>Married</li>
+      <li>Rather Not Say</li>
+
+    </ol> 
+  </div>
+  <script>
+    var existingElement = document.getElementById("MaritalStatus");
+    var newElement = document.createElement("div");
+
+    var parentDiv = existingElement.parentNode;
+
+    var title = document.createElement("h1");
+    title.innerText="Choose your Marital Status";
+
+    newElement.appendChild(title);
+
+    var maritalStatusRadio = ["Single","Married","Rather not say"];
+    for(let i=0;i<maritalStatusRadio.length;i++){
+      
+      var List=document.createElement("input");
+      List.setAttribute('type', 'radio');
+      List.setAttribute('name', 'marital');
+      List.setAttribute('id', 'marital');
+      List.setAttribute('value', maritalStatusRadio[i]);
+
+      
+      var label = document.createElement("label");
+      label.setAttribute('for', maritalStatusRadio[i]);
+      label.innerText = maritalStatusRadio[i];
+      label.setAttribute('value', maritalStatusRadio[i]);
+
+      var br = document.createElement("br");
+
+      newElement.appendChild(List);
+      newElement.appendChild(label);
+      newElement.appendChild(br);
+    }
+    parentDiv.replaceChild(newElement,existingElement);
+  </script>
+</body>
+</html>
