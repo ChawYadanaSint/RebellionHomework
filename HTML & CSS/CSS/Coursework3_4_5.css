@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flip-container{
+  margin: 30px;
+  border: 2px solid transparent;
+  width: 250px;
+  height: 300px;
+  background-color:transparent;
+  border-radius: 10px;
+  perspective: 1000px;
+  font-family: "Montserrat", sans-serif !important;
+  cursor: pointer;
+}
+
+/* Flip Inner Container */
+.flip-inner-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+/* add hover to Flip horizonally */
+.flip-container:hover .flip-inner-container{
+  transform: rotateY(180deg);
+}
+
+/* position front and back */
+
+.flip-front,
+.flip-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: -1px 2px 13px 0px rgba(0,0,0, 0.75);
+}
+
+/* flip  front */
+.flip-front{
+background-repeat: no-repeat;
+color: #ffffff;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+
+/* flip back */
+.flip-back{
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 100px;
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(100, 212, 66), rgb(14, 104, 146));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.fruit{
+  margin-top: 115px;
+  color: white;
+}
+.phonetics{
+  color:#999;
+  margin-top: 5px;
+}
+
+.strawberry{
+  background-color: pink;
+}
+
+.mango{
+  background-color: #ffc324;
+}
+
+.grape{
+  background-color: #6f2da8;
+}
+.lemon{
+  background-color: #fff700;
+}
+.pineapple{
+  background-color: #563c0d;
+}
+.watermelon{
+  background-color: #c63e47;
+}
+.apple{
+  background-color: #ff0800;
+}
+.banana{
+  background-color: #ffe135;
+}
+
+@media (min-width: 768px) and (max-width: 950px){
+
+  .title{
+    font-size: 70px;
+  }
+  
+  .flip-container{
+    margin: 20px;
+    width: 160px;
+    height: 240px;
+    perspective: 1000px;
+  }
+  .flip-front{
+    background-size: 160px 240px !important;
+  }
+
+  .fruit{
+    margin-top: 95px;
+    font-size: 20px;
+  }
+  .phonetics{
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px){
+
+  .title{
+    font-size: 40px;
+  }
+  
+  .flip-container{
+    margin: 15px;
+    width: 130px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  .flip-front{
+    background-size: 130px 200px !important;
+  }
+
+  .fruit{
+    margin-top: 60px;
+    font-size: 18px;
+  }
+  .phonetics{
+    font-size: 15px;
+  }
+}

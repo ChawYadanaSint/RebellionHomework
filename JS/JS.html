@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="intro-div">Introduction</div>
+  <!-- <ol>
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Grape</li>
+    <li>Pineapple</li>
+  </ol> -->
+  <script>
+    var doc = document;
+    var existingElement = doc.getElementById("intro-div");
+    var newElement = doc.createElement('ol');
+    var fruit =['apple','mango',"grape","pineapple"];
+    for(let i=0;i<fruit.length;i++){
+      var fruitList=doc.createElement("li");
+      fruitList.innerText=fruit[i];
+      newElement.appendChild(fruitList);
+    }
+    newElement.style.fontSize='12px';
+    newElement.style.color="navy";
+    newElement.style.listStyleType="upper-roman";
+    existingElement.appendChild(newElement);
+
+  </script>
+</body>
+</html>
